@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product preview</title>
+    <style>
+        #main-product-image {
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto;
+
+        }
+
+        .product-img {
+            height: 70px;
+            width: 70px;
+            object-fit: contain;
+            border: 1px solid black;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .product-img-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img1.jpg" id="main-product-image">
+    <div class="product-img-container">
+        <img src="img2.jpg" class="product-img" onclick="changeimg('img2.jpg')">
+        <img src="img3.jpg" class="product-img" onclick="changeimg('img3.jpg')">
+        <img src="img4.jpg" class="product-img" onclick="changeimg('img4.jpg')">
+        <img src="img5.jpg" class="product-img" onclick="changeimg('img5.jpg')">
+    </div>
+    <script>
+        function changeimg(imgname) {
+            const mainimg = document.getElementById('main-product-image');
+            mainimg.src = imgname;
+             
+
+        }
+    </script>
+</body>
+
+</html>
